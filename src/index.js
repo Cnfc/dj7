@@ -7,6 +7,8 @@ import Home from './components/home';
 import Posts from './components/posts';
 import Profile from './components/profile';
 import PostItem from './components/PostItem';
+import Life from './components/lifecycles';
+import Conditional from './components/conditional';
 
 
 // meawesomeapp.com/post
@@ -22,14 +24,21 @@ const App = () => {
              activeStyle={{color:'red'}}
              activeClassName="selected"
              >Posts</NavLink><br/>
-          <NavLink to={{
-              pathname:'/profile',
-            }}>Profile</NavLink><br/><hr/>
+           <NavLink to={{
+               pathname:'/profile'
+             }}>Profile</NavLink><br/>
+           <NavLink to="/Life">Life</NavLink><br/>
+           <NavLink to="/conditional">conditional</NavLink><br/>
+           <hr/>
         </header>
-        <Route path="/" component={Home}/>
-        <Route path="/posts" component={Posts}/>
-        <Route path="/posts/:id/:username" component={PostItem}/>
-        <Route path="/profile" component={Profile}/>
+        <Switch>
+          <Route path="/posts/:id/:username" component={PostItem}/>
+          <Route path="/profile" component={Profile}/>
+          <Route path="/posts" component={Posts}/>
+          <Route path="/life" component={Life}/>
+          <Route path="/conditional" component={Conditional}/>
+          <Route path="/" exact component={Home}/>
+      </Switch>
       </div>
     </BrowserRouter>
   )
