@@ -19,13 +19,20 @@ class App extends Component {
     let filtered = this.state.news.filter((item) => {
       return item.title.indexOf(keyword) > -1
     });
+    this.setState({
+      filtered
+    })
   }
 
   render(){
+
+    let newsFiltered = this.state.filtered;
+    let newsWhole = this.state.news
+
     return (
       <div>
         <Header keywords={this.getKeyword}/>
-        <NewsList news={this.state.news}>
+        <NewsList news={newsFiltered.length === 0 ? newsWhole : newsFiltered}>
           <h3>The news are:</h3>
           </NewsList>
       </div>
