@@ -1,9 +1,11 @@
 import React from 'react';
 
-const userHoc = (WrappedComponent, arg1 ) => {
+const userHoc = (WrappedComponent, WrappedComponent2, arg1 ) => {
   return (props) => (
     <div>
-      <WrappedComponent/>
+
+      <WrappedComponent {...props}/>
+      <WrappedComponent2 {...props}/>
     </div>
   )
 }

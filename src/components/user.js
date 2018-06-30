@@ -8,5 +8,12 @@ const User = () => {
     </div>
   )
 }
+const User2 = () => {
+  return (
+    <div>
+      user 2
+    </div>
+  )
+}
 
-export default userHoc(User, 'Hellll');
+export default userHoc(User, User2, 'Hellll');
