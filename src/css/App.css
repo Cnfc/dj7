@@ -36,7 +36,7 @@
   margin-top: 20px;
 }
 
-.btn-add, 
+.btn-add,
 .btn-remove {
   background: #9E9E9E;
   color: #FFf;
@@ -71,33 +71,30 @@
 }
 
 /*=======================================
-            TRANSITIONS BASIC 
+            TRANSITIONS BASIC
 ========================================*/
 
 .square {
   background: red;
-  height:100px;
-  opacity:1;
+  height: 100px;
+  opacity: 1;
   transition: all 2s ease;
 }
-
 .square.square-entering {
   opacity: 1;
   transform: translateX(0%);
 }
-
 .square.square-entered {
   background: blue;
 }
-
 .square.square-exiting {
-  background: green
+  background: green;
+}
+.square.square-exiting{
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
-.square.square-exited {
-  opacity: 0;
-  transform: translateX(-100%)
-}
 
 
 /*=======================================
@@ -123,10 +120,10 @@
 
 
 /*=======================================
-            TRANSITIONS GROUP 
+            TRANSITIONS GROUP
 ========================================*/
 
-.item {
+.item{
   opacity: 0;
   transform: translateX(-100%);
   transition: all .5s ease-in;
@@ -140,5 +137,34 @@
 
 .item-exit.item-exit-active {
   opacity: 0;
-  transform: translateX(-100%)
+  transform: translateX(-100%);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ssss */
